@@ -1,8 +1,10 @@
 ﻿namespace HackerNews.BestStories.Domain;
 
-public class Story
+public class HackerNewsItem
 {
-    public Story(string title,
+    protected HackerNewsItem(){ }
+    
+    public HackerNewsItem(string title,
         string uri,
         string postedBy,
         DateTime time,

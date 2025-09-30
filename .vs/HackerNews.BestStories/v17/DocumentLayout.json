@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Sources\\HackerNews.BestStories\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{413C61C0-C39D-477E-A58C-71D1C5A7FBBE}|src\\HackerNews.BestStories.Api\\HackerNews.BestStories.Api.csproj|d:\\sources\\hackernews.beststories\\src\\hackernews.beststories.api\\configuration\\apiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413C61C0-C39D-477E-A58C-71D1C5A7FBBE}|src\\HackerNews.BestStories.Api\\HackerNews.BestStories.Api.csproj|solutionrelative:src\\hackernews.beststories.api\\configuration\\apiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413C61C0-C39D-477E-A58C-71D1C5A7FBBE}|src\\HackerNews.BestStories.Api\\HackerNews.BestStories.Api.csproj|d:\\sources\\hackernews.beststories\\src\\hackernews.beststories.api\\configuration\\swaggerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413C61C0-C39D-477E-A58C-71D1C5A7FBBE}|src\\HackerNews.BestStories.Api\\HackerNews.BestStories.Api.csproj|solutionrelative:src\\hackernews.beststories.api\\configuration\\swaggerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413C61C0-C39D-477E-A58C-71D1C5A7FBBE}|src\\HackerNews.BestStories.Api\\HackerNews.BestStories.Api.csproj|d:\\sources\\hackernews.beststories\\src\\hackernews.beststories.api\\configuration\\dependencyinjectionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413C61C0-C39D-477E-A58C-71D1C5A7FBBE}|src\\HackerNews.BestStories.Api\\HackerNews.BestStories.Api.csproj|solutionrelative:src\\hackernews.beststories.api\\configuration\\dependencyinjectionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21256D7C-3F43-4481-8D7B-3D100593E8A0}|src\\HackerNews.BestStories.Application\\HackerNews.BestStories.Application.csproj|d:\\sources\\hackernews.beststories\\src\\hackernews.beststories.application\\services\\storyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21256D7C-3F43-4481-8D7B-3D100593E8A0}|src\\HackerNews.BestStories.Application\\HackerNews.BestStories.Application.csproj|solutionrelative:src\\hackernews.beststories.application\\services\\storyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiConfig.cs",
+              "DocumentMoniker": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Api\\Configuration\\ApiConfig.cs",
+              "RelativeDocumentMoniker": "src\\HackerNews.BestStories.Api\\Configuration\\ApiConfig.cs",
+              "ToolTip": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Api\\Configuration\\ApiConfig.cs",
+              "RelativeToolTip": "src\\HackerNews.BestStories.Api\\Configuration\\ApiConfig.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T10:54:06.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SwaggerConfig.cs",
+              "DocumentMoniker": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Api\\Configuration\\SwaggerConfig.cs",
+              "RelativeDocumentMoniker": "src\\HackerNews.BestStories.Api\\Configuration\\SwaggerConfig.cs",
+              "ToolTip": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Api\\Configuration\\SwaggerConfig.cs",
+              "RelativeToolTip": "src\\HackerNews.BestStories.Api\\Configuration\\SwaggerConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T10:08:58.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StoryService.cs",
+              "DocumentMoniker": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Application\\Services\\StoryService.cs",
+              "RelativeDocumentMoniker": "src\\HackerNews.BestStories.Application\\Services\\StoryService.cs",
+              "ToolTip": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Application\\Services\\StoryService.cs",
+              "RelativeToolTip": "src\\HackerNews.BestStories.Application\\Services\\StoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T09:50:24.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjectionConfig.cs",
+              "DocumentMoniker": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Api\\Configuration\\DependencyInjectionConfig.cs",
+              "RelativeDocumentMoniker": "src\\HackerNews.BestStories.Api\\Configuration\\DependencyInjectionConfig.cs",
+              "ToolTip": "D:\\Sources\\HackerNews.BestStories\\src\\HackerNews.BestStories.Api\\Configuration\\DependencyInjectionConfig.cs",
+              "RelativeToolTip": "src\\HackerNews.BestStories.Api\\Configuration\\DependencyInjectionConfig.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T09:49:30.15Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

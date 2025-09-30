@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Configuration\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HackerNews.BestStories.Domain\HackerNews.BestStories.Domain.csproj" />
+      <ProjectReference Include="..\HackerNews.BestStories.Infrastructure\HackerNews.BestStories.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="15.0.1" />
+      <PackageReference Include="MediatR" Version="13.0.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.5" />
+    </ItemGroup>
+
+</Project>

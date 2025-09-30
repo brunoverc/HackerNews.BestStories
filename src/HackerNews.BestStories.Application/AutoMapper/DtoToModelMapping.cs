@@ -4,18 +4,17 @@ using HackerNews.BestStories.Shared;
 
 namespace HackerNews.BestStories.Application.AutoMapper;
 
-public class ModelToDtoMappingProfile : Profile
+public class DtoToModelMappingProfile : Profile
 {
-    public ModelToDtoMappingProfile()
+    public DtoToModelMappingProfile()
     {
         CreateMap<HackerNewsItemDto, HackerNewsItem>()
-            .ForMember(hni => hni.PostedBy, 
+            .ForMember(dto => dto.PostedBy, 
                 opt => opt.MapFrom(map => map.By))
-            .ForMember(hni => hni.CommentCount, 
+            .ForMember(dto => dto.CommentCount, 
                 opt => opt.MapFrom(map => map.Descendants))
-            .ForMember(hni => hni.Time,
-                opt => opt.MapFrom(map => DateTimeOffset.FromUnixTimeSeconds(map.Time).UtcDateTime))
-            
+            .ForMember(dto => dto.Uri,
+                        opt => opt.MapFrom(map => map.Url))
             .ForMember(dto => dto.Time,
                 opt => opt.MapFrom(map => DateTimeOffset.FromUnixTimeSeconds(map.Time).UtcDateTime));
     }
