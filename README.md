@@ -1,10 +1,10 @@
-# 🚀 Hacker News Best Stories API
+# Hacker News Best Stories API
 
 This project exposes a RESTful API using **ASP.NET Core (.NET 9)** that retrieves the **best N stories from the Hacker News API**, ordered by score.
 
 ---
 
-## 📌 Purpose
+## Purpose
 The API must:
 - Retrieve the **best stories** (`amount` defined by the caller).
 - Return them sorted by **score** in descending order.
@@ -41,7 +41,7 @@ The API must:
 
 ---
 
-## 🔐 Why this matters
+## Why this matters
 
 By combining:
 - **Cache** (avoid redundant external calls),
@@ -57,7 +57,7 @@ By combining:
 
 ---
 
-## 🏗️ Architecture (Clean Architecture Style)
+## Architecture (Clean Architecture Style)
 
 The solution follows a layered architecture:
 
@@ -121,7 +121,7 @@ Example call → https://localhost:5001/api/v1/stories/bests/{amount}
 ]
 ```
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Switch from MemoryCache → Redis for distributed environments.
 
@@ -137,5 +137,6 @@ Example call → https://localhost:5001/api/v1/stories/bests/{amount}
 
 Developed by Bruno Verçosa.
 Focus: Resilience, Performance, and Clean Architecture in .NET.
+
 
 
