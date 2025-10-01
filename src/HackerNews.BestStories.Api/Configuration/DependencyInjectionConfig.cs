@@ -10,8 +10,8 @@ using Polly.Extensions.Http;
 namespace HackerNews.BestStories.Api.Configuration;
 
 using HackerNews.BestStories.Application.AutoMapper;
-using HackerNews.BestStories.Application.Interfaces;
-using HackerNews.BestStories.Application.Services;
+using Application.Interfaces;
+using Application.Services;
 
 public static class DependencyInjectionConfig
 {

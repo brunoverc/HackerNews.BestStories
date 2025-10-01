@@ -1,6 +1,4 @@
-﻿using HackerNews.BestStories.Shared.Enums;
-
-namespace HackerNews.BestStories.Shared;
+﻿namespace HackerNews.BestStories.Shared;
 
 public class HackerNewsItemDto
 {

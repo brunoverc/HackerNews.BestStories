@@ -24,6 +24,4 @@ public class CacheService : ICacheService
         _memoryCache.Set(key, value, ttl);
         return Task.CompletedTask;
     }
-    
-    
 }

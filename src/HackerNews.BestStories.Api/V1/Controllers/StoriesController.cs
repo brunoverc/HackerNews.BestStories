@@ -20,5 +20,4 @@ public class StoriesController : Controller
         var stories = await _storyService.GetBestStoriesAsync(amount, cancellationToken);
         return stories == null ? NotFound() : Ok(stories);
     }
-
 }

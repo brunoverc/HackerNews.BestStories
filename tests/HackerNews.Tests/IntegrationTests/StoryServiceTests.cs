@@ -11,7 +11,7 @@ using HackerNews.BestStories.Shared;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace IntegrationTests;
+namespace HackerNews.Tests.IntegrationTests;
 
 public class StoryServiceTests
 {

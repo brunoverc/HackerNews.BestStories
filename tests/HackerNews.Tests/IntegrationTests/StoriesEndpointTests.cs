@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Xunit;
 
-namespace IntegrationTests;
+namespace HackerNews.Tests.IntegrationTests;
 
 public class StoriesEndpointTests : IClassFixture<WebApplicationFactory<Program>>
 {
