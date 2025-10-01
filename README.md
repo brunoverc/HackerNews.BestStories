@@ -59,6 +59,9 @@ By combining:
 
 ## Architecture (Clean Architecture Style)
 
+<img width="1024" height="1536" alt="Image" src="https://github.com/user-attachments/assets/8fd767d2-c936-4cd1-b509-03659827f4ce" />
+
+
 The solution follows a layered architecture:
 
 ```bash
@@ -137,6 +140,7 @@ Example call → https://localhost:5001/api/v1/stories/bests/{amount}
 
 Developed by Bruno Verçosa.
 Focus: Resilience, Performance, and Clean Architecture in .NET.
+
 
 
 
