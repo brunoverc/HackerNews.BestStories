@@ -3,6 +3,7 @@ using HackerNews.BestStories.Application.Interfaces;
 using HackerNews.BestStories.Domain;
 using HackerNews.BestStories.Infrastructure.Cache.Interfaces;
 using HackerNews.BestStories.Infrastructure.Clients.Interfaces;
+using HackerNews.BestStories.Infrastructure.RateLimiting.Interfaces;
 using HackerNews.BestStories.Shared;
 using Microsoft.AspNetCore.Identity;
 
@@ -13,16 +14,19 @@ public class StoryService : IStoryService
     private readonly IHackerNewsClient _hackerNewsClient;
     private readonly IMapper _map;
     private readonly ICacheService _cacheService;
+    private readonly IExternalRateLimiter _rateLimiter;
     
     private const string BestStoriesCacheKey = "beststories_ids";
 
     public StoryService(IHackerNewsClient hackerNewsClient,
         IMapper mapper,
-        ICacheService cacheService)
+        ICacheService cacheService,
+        IExternalRateLimiter rateLimiter)
     {
         _hackerNewsClient = hackerNewsClient;
         _map = mapper;
         _cacheService = cacheService;
+        _rateLimiter = rateLimiter;
     }
 
     public async Task<IEnumerable<int>> GetStoryIdsAsync(CancellationToken cancellationToken = default)
@@ -32,11 +36,22 @@ public class StoryService : IStoryService
         {
             return cached;
         }
+        
+        await ProtectExternalAPI(cancellationToken);
+        
         var bestStoriesIds = await _hackerNewsClient.GetBestStoriesIdsAsync(cancellationToken);
         
         await _cacheService.SetAsync(BestStoriesCacheKey, bestStoriesIds, TimeSpan.FromMinutes(5), cancellationToken);
         
         return bestStoriesIds;
+    }
+
+    private async Task ProtectExternalAPI(CancellationToken cancellationToken)
+    {
+        if (!await _rateLimiter.AcquireAsync(cancellationToken))
+        {
+            throw new InvalidOperationException("Rate limit exceeded for Hacker News API.");
+        }
     }
 
     public async Task<HackerNewsItem?> GetStoryByIdAsync(int id, CancellationToken cancellationToken = default)
@@ -47,6 +62,9 @@ public class StoryService : IStoryService
         {
             return _map.Map<HackerNewsItem>(cached);
         }
+        
+        await ProtectExternalAPI(cancellationToken);
+
         
         var storyIn = await _hackerNewsClient.GetStoryByIdAsync(id, cancellationToken);
 

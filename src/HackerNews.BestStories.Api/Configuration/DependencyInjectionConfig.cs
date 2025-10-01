@@ -2,6 +2,8 @@
 using HackerNews.BestStories.Infrastructure.Cache.Interfaces;
 using HackerNews.BestStories.Infrastructure.Clients;
 using HackerNews.BestStories.Infrastructure.Clients.Interfaces;
+using HackerNews.BestStories.Infrastructure.RateLimiting;
+using HackerNews.BestStories.Infrastructure.RateLimiting.Interfaces;
 
 namespace HackerNews.BestStories.Api.Configuration;
 
@@ -17,6 +19,8 @@ public static class DependencyInjectionConfig
 
         services.AddMemoryCache();
         services.AddScoped<ICacheService, CacheService>();
+        
+        services.AddSingleton<IExternalRateLimiter, HackerNewsRateLimiter>();
         
         services.AddScoped<IHackerNewsClient, HackerNewsClient>();
         services.AddScoped<IStoryService, StoryService>();

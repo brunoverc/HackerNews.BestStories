@@ -6,6 +6,7 @@ using HackerNews.BestStories.Application.Services;
 using HackerNews.BestStories.Domain;
 using HackerNews.BestStories.Infrastructure.Cache;
 using HackerNews.BestStories.Infrastructure.Clients.Interfaces;
+using HackerNews.BestStories.Infrastructure.RateLimiting.Interfaces;
 using HackerNews.BestStories.Shared;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -25,8 +26,13 @@ public class StoryServiceTests
 
         var memoryCache = new MemoryCache(new MemoryCacheOptions());
         var cacheService = new CacheService(memoryCache);
-
-        return new StoryService(mockClient.Object, mapper, cacheService);
+        
+        var mockRateLimiter = new Mock<IExternalRateLimiter>();
+        mockRateLimiter
+            .Setup(x => x.AcquireAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
+        
+        return new StoryService(mockClient.Object, mapper, cacheService, mockRateLimiter.Object);
     }
 
     [Fact]
@@ -69,8 +75,13 @@ public class StoryServiceTests
             cfg => cfg.CreateMap<HackerNewsItemDto, HackerNewsItem>(),
             NullLoggerFactory.Instance);
         var mapper = config.CreateMapper();
+        
+        var mockRateLimiter = new Mock<IExternalRateLimiter>();
+        mockRateLimiter
+            .Setup(x => x.AcquireAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(true);
 
-        var service = new StoryService(mockClient.Object, mapper, cacheService);
+        var service = new StoryService(mockClient.Object, mapper, cacheService, mockRateLimiter.Object);
 
         var first = await service.GetStoryByIdAsync(storyId);
 
