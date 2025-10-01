@@ -11,7 +11,6 @@ public class HackerNewsClient : IHackerNewsClient
     public HackerNewsClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
-        _httpClient.BaseAddress = new Uri("https://hacker-news.firebaseio.com/v0/");
     }
 
     public async Task<IEnumerable<int>>? GetBestStoriesIdsAsync(CancellationToken cancellationToken = default)

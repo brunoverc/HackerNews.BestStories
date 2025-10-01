@@ -35,17 +35,11 @@ public static class ApiConfig
     
     public static WebApplication UseStartupConfiguration(this WebApplication app)
     {
-        app.MapGet("/health", () => Results.Ok(new { status = "ok" }))
-            .DisableRateLimiting();
-        
+       
         app.UseSwagger();
         app.UseSwaggerUI();
         
         app.UseRateLimiter();
-
-        
-        app.MapGet("/api/v1/stories", (int n) => Results.Ok(new { n }))
-            .RequireRateLimiting("per-ip");
 
         if (!app.Environment.IsProduction())
             app.UseDeveloperExceptionPage();
