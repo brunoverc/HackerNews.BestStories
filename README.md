@@ -90,7 +90,7 @@ The solution follows a layered architecture:
 
 ```bash
 # clone repository
-git clone https://github.com/brunoverc/hackernews-beststories.git
+git clone https://github.com/brunoverc/HackerNews.BestStories.git
 
 cd hackernews-beststories
 
@@ -135,6 +135,7 @@ Example call → https://localhost:5001/api/v1/stories/bests/{amount}
 
 ## 👨‍💻 Author
 
-Developed by Bruno Verçosa as part of a technical coding challenge.
+Developed by Bruno Verçosa.
 Focus: Resilience, Performance, and Clean Architecture in .NET.
+
 
